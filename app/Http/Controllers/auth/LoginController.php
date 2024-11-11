@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
@@ -57,6 +57,7 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
         return redirect('/login');
     }
+
 
     /**
      * Show the form for creating a new resource.
